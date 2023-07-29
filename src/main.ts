@@ -1,11 +1,10 @@
-import { add } from './foo.js';
+import { add, foo } from './foo.js';
 import './style.css'
 
-function sum(num_arr: number[]) {
-  return num_arr.reduce(function (acc, cur) {
-    return add(acc, cur);
-  }, 0);
+export default function sum(num_arr: number[]) {
+  return {
+    sum: num_arr.reduce((a, b) => add(a, b), 0),
+    bar: foo.bar
+  }
 }
 console.log(sum([1, 2, 3, 4, 5]));
-
-export { sum as default };

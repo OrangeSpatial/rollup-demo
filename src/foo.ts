@@ -1,5 +1,10 @@
-var add = function add(x: number, y: number) {
+type Foo = {
+  bar: string;
+};
+export const add = (x: number, y: number) => {
   return x + y;
 };
 
-export { add };
+export const foo: Foo = {
+  bar: 'baz',
+};

@@ -21,11 +21,7 @@ export default {
     plugins: [
         resolve(),
         commonjs(),
-        typescript({
-          outDir: "dist",
-          declaration: true,
-          declarationDir: "dist",
-      }),
+        typescript(),
         external({
             deps: true
         }),
